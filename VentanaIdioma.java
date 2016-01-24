@@ -77,7 +77,7 @@ public class VentanaIdioma extends JFrame implements ActionListener {
 	
 	private void guardar() { //implementación de práctica
 		String selectedItemCombo= comboIdioma.getSelectedItem().toString();
-		if(!existBuscar(selectedItemCombo)){
+		if(!buscar(selectedItemCombo)){
 			guardarDato(selectedItemCombo);
 			inicializar(); //logra un rendimiento reducido. 
 			//Sería mejor insertar el item en el combo, 
@@ -85,7 +85,7 @@ public class VentanaIdioma extends JFrame implements ActionListener {
 		}
 	}
 	
-	private boolean existBuscar(String object){ //implementación de práctica
+	private boolean buscar(String object){ //implementación de práctica
 		for(int i=0; i<comboIdioma.getItemCount(); i++){
 			if(comboIdioma.getItemAt(i).equalsIgnoreCase(object)){
 				return true;
